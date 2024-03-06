@@ -1,0 +1,158 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.main-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,#000, #222),
+    linear-gradient(0deg, #333, transparent);
+    width: 100vw;
+    height: 100vh;
+   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-container{
+    text-align: center;
+    background: #222;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    border-radius: 8px;
+    margin: 0 15% 0 15%;
+}
+.login-container::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 550px;
+    transition: all .35s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-container:hover::before{
+    background: repeating-conic-gradient(from 0deg, #00ffff, #01dbc2);
+    box-shadow: 0 0 8px cyan,
+    0 0 14px cyan;
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.login-container::after{
+    content: "";
+    position: absolute;
+    background-color: #222;
+    inset: 2px;
+    border-radius: 8px;
+}
+.login-container h4{
+    color: white;
+    font-size: 1.2rem;
+}
+.login-container span{
+    position: relative;
+    z-index: 10;
+}
+.login-container span form{
+    flex-wrap: wrap;
+    display: flex;
+}
+.input{
+    flex: 1 0 10rem;
+    background-color: #444;
+    border: none;
+    color: white;
+    /* width: 50; */
+    outline: none;
+    padding: 10px;
+    height: 20px;
+    margin: 8px 5px 8px 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.login-container:hover .input::before{
+    content: "";
+    background-color: cyan;
+    box-shadow: 0 0 14px cyan;
+    position: absolute;
+    width: 80px;
+    margin: 0;
+    height: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    rotate: 60deg;
+    animation: input 3s linear infinite;
+}
+.input::after{
+    content: "";
+    inset: 2px;
+    background-color: #444;
+    position: absolute;
+    border-radius: 8px;
+}
+@keyframes input {
+    0%{
+        rotate: 360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+input[type="text"]{
+    background-color: #444;
+    padding: 6px;
+    color: white;
+    border: none;
+    outline: none;
+}
+input[type="password"]{
+    background-color: #444;
+    padding: 6px;
+    color: white;
+    border: none;
+    outline: none;
+}
+.sign-in{
+    flex: 1 0 10em;
+    border-radius: 8px;
+    padding: 10px 40px 10px 40px;
+    border: none;
+    margin: 8px 5px 8px 5px;
+    background-color: cyan;
+    box-shadow: 0 0 10px cyan, 
+    0 0 18px cyan;
+    color: white;
+    font-weight: bold;
+}
+.other{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+    flex-wrap: wrap;
+}
+.other .password{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.signup{
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 0 14px cyan;
+}
